@@ -1,0 +1,41 @@
+import java.util.Scanner;
+
+public class Main {
+    int rno;
+    String name;
+    String remark;
+    float score;
+
+    void enter() {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter roll number: ");
+        rno = sc.nextInt();
+        sc.nextLine();  // Consume newline left-over
+        System.out.print("Enter name: ");
+        name = sc.nextLine();
+        System.out.print("Enter score: ");
+        score = sc.nextFloat();
+    }
+
+    void assignRem() {
+        if (score >= 50) {
+            remark = "Selected";
+        } else {
+            remark = "Not Selected";
+        }
+    }
+
+    void display() {
+        System.out.println("Roll Number: " + rno);
+        System.out.println("Name: " + name);
+        System.out.println("Score: " + score);
+        System.out.println("Remark: " + remark);
+    }
+
+    public static void main(String[] args) {
+        Main c1 = new Main();
+        c1.enter();
+        c1.assignRem();
+        c1.display();
+    }
+}
