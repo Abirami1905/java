@@ -1,0 +1,32 @@
+public class SumOfDigits
+{
+    //creating method for the sum of Digits of a Number
+    
+    static int Digits(int num){
+        
+        int sum=0;
+        while(num>0){
+        int temp=num%10;
+        sum=sum+temp;
+        num=num/10;
+        }
+        return sum;
+    }
+    
+    static void printline(){
+        System.out.println("------------");
+    }
+	public static void main(String[] args) {
+	    printline();
+	    System.out.println("my code");
+		System.out.println(Digits(437));
+		printline();
+	}
+}
+
+
+OUTPUT:
+--------
+my code
+14
+--------
