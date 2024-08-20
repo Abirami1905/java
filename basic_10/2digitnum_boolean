@@ -1,0 +1,32 @@
+public class TwoDigit
+{
+    //creating method for finding whether the number is 2 Digit number
+    
+    static boolean Digits(int num){
+        
+        if(num>=10 & num<=99){
+          return true;  
+        }
+        
+        else{
+            return false;
+        }
+        
+    }
+    
+    static void printline(){
+        System.out.println("------------");
+    }
+	public static void main(String[] args) {
+	    printline();
+	    System.out.println("my code");
+		System.out.println(Digits(56));
+		printline();
+	}
+}
+
+OUTPUT:
+---------
+my code
+true
+----------
