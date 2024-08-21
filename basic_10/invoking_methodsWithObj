@@ -1,0 +1,34 @@
+ public class Box
+{
+    int l;
+    int b;
+    int h;
+    int a;
+    int vol(){
+        return l*b*h;
+    }
+    int surfaceArea(){
+        return 6*(a^2);
+        
+    }
+    
+
+    
+	public static void main(String[] args) {
+	    Box blackBox;
+	    blackBox=new Box();
+	    blackBox.l=10;
+	    blackBox.b=5;
+	    blackBox.h=7;
+	    blackBox.a=8;
+	    
+		System.out.println("volume of black box "+blackBox.vol());
+		System.out.println("Surface Area of black box "+blackBox.surfaceArea());
+	
+}
+}
+
+OUTPUT:
+volume of black box 350
+Surface Area of black box 60
+
