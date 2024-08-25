@@ -1,0 +1,32 @@
+
+
+public class Vowels
+{
+	public static void main(String[] args) {
+		String a="program";
+		int count=0;
+		for(int i=0; i<a.length(); i++) {
+			char ch=a.charAt(i);
+			switch(ch) {
+			case 'a':
+			case 'e':
+			case 'i':
+			case 'o':
+			case 'u':count++;
+			break;
+
+			}
+			
+		}
+		if(count==0){
+			    System.out.println("No vowels are present in the given string");
+			}
+			else{
+			    System.out.println(count+" vowels are present in the given string ");
+			}
+	
+	}
+}
+
+OUTPUT:
+        2 vowels are present in the given string 
