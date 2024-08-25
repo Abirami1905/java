@@ -1,0 +1,26 @@
+public class Palindrome
+{
+	public static void main(String[] args) {
+	    String a="malayalam";
+	    String b="";
+	    for(int i=a.length()-1;i>=0;i--)//i<7-1;i>=0;print();6 decremented to 5
+	    {
+	     b=b+a.charAt(i);  
+		
+	    }
+	    System.out.println("The original string is: "+a);
+	    System.out.println("The reversed String is: "+b);
+	    
+	    if(b.equals(a)){
+	        System.out.println("It is a palindrome");
+	    }
+	    else{
+	       System.out.println("It is not a palindrome"); 
+	    }
+	}
+}
+
+OUTPUT:
+The original string is: malayalam
+The reversed string is: malayalam
+It is a palindrome
