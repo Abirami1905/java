@@ -1,0 +1,27 @@
+logic:1
+
+public class Swap
+{
+	public static void main(String[] args) {
+	    int a=10,b=20;
+	    b=b-a;
+	    a=a+b;
+		System.out.print("The swapped numbers are :a= "+a +" and b= "+ b);
+	}
+}
+
+logic:2
+
+public class Swap
+{
+	public static void main(String[] args) {
+	    int a=10,b=20;
+	    a=b+a;//a=10+20 value updated as a=30 now
+	    b=a-b;//b=30-20 value updated as b=10 now
+      a=a-b://a=30-10 value updated as a=20 now
+     
+		System.out.print("The swapped numbers are :a= "+a +" and b= "+ b);
+	}
+}
+OUTPUT:
+The swapped numbers are :a=20 and b=10
