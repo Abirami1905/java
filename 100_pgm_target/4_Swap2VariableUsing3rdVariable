@@ -1,0 +1,15 @@
+Swap two variables using third variale:
+
+public class Swap
+{
+	public static void main(String[] args) {
+	    int a=10,b=20,temp;
+	    temp=a;//temp=10
+	    a=b;// a is updated as 20
+	    b=temp;//b is updated as 10
+	    System.out.print("The swapped numbers are :a= "+a +" and b= "+ b);
+	}
+}
+
+OUTPUT:
+     The swapped numbers are :a=20 and b=10
