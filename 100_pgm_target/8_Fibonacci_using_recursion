@@ -1,0 +1,33 @@
+public class Fibonacci
+{
+    static int n1=0,n2=1,n3=0;//declaring values into variables
+    static void fibo(int count)// recursive case method
+    {
+        if(count>0)//base case
+        {
+            n3=n1+n2;//n3=0+1=1
+            n1=n2;//n1=1
+            n2=n3;//n3=0
+            System.out.println(" "+n3);//1 2 3 5 8 13 21 34 
+            fibo(count-1);// (8-1)=7 6 5 4 3 2 1 
+            
+        }
+    }
+	public static void main(String[] args) {
+	    int count=10;
+		System.out.println(n1+"\n"+n2);//0 1
+		fibo(count-2);//(10-2)=8
+	}
+}
+
+OUTPUT:
+0
+1
+1
+2
+3
+5
+8
+13
+21
+34
