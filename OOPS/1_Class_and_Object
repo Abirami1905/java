@@ -1,0 +1,22 @@
+class Management{
+    String User;
+    String Book;
+    int Card;
+    String RemMes;
+}
+
+
+public class Library
+{
+	public static void main(String[] args) {
+	    Management D=new Management();
+	    D.User="Abirami.B";
+	    D.Book="The richest man in Babylon";
+	    D.Card=1;
+	    D.RemMes="You have 1 book in your account!!!";
+		System.out.println("User name is "+D.User);
+	}
+}
+
+OUTPUT:
+User name is Abirami.B
