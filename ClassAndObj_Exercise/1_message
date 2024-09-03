@@ -1,0 +1,25 @@
+/******************************************************************************
+
+ 1. Write a Java program to print message using class
+
+*******************************************************************************/
+class A{
+    
+    void method(){
+       System.out.println("Hi!!!"); 
+    }
+    
+}
+
+
+public class Main
+{
+	public static void main(String[] args) {
+	    A obj=new A();
+	    obj.method();//calling the method using an object
+		
+	}
+}
+
+/* OUTPUT:
+Hi!!! */
