@@ -1,0 +1,33 @@
+class a{
+    
+    int Contact=17;//assigning value in a variable
+    
+    void Whatsapp()// Creating a method called Whatsapp 
+    {
+        Long phone_number=3245657898l;
+        System.out.println("my whatsapp number is "+phone_number);
+     }
+     static void Reminder()
+     {
+         System.out.println("This is Static. Static keyword doesn't requires Object");
+     }
+    
+}
+
+
+public class SocialMedia
+{
+	public static void main(String[] args) //Main method
+	{
+	    a D=new a();//Creating an Object
+	   	System.out.println(D.Contact);
+	   	D.Whatsapp();
+	   	a.Reminder();
+	}
+}
+
+OUTPUT:
+
+17
+my whatsapp number is 3245657898 
+This is Static. Static keyword doesn't requires Object
