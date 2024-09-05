@@ -1,0 +1,29 @@
+/******************************************************************************
+Check Alphabet or Not:
+
+Write a program that takes a character as input and checks whether
+it is an alphabet (a-z or A-Z) or not.
+*******************************************************************************/
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // Taking input from the user
+        System.out.print("Enter a character: ");
+        char ch = scanner.next().charAt(0);
+        
+        // Check if the character is an alphabet (either lowercase or uppercase)
+        if ((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z')) {
+            System.out.println(ch + " is an alphabet.");
+        } else {
+            System.out.println(ch + " is not an alphabet.");
+        }
+
+        scanner.close();  // Close the scanner
+    }
+}
+/* Enter a character:a
+a is an alphabet */
