@@ -1,0 +1,39 @@
+/******************************************************************************
+write a java program that takes a student's score as input and prints the grade
+based on the following criteria.
+a->=90, b-b/w 80 & 89 , c-b/w 70 & 79 , d-b/w 60 & 69 and f<60
+                            
+*******************************************************************************/
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    
+	    int mark;
+	    Scanner a =new Scanner(System.in);
+	    mark=a.nextInt();
+	    
+	        if(mark>=90){
+	           System.out.println("A grade");
+	        } 
+	          else if(mark>80 && mark<89){
+	           System.out.println("A grade");
+	        }  
+	           else if(mark>70 && mark<79){
+	           System.out.println("A grade");
+	        }  
+	          else if(mark>60 && mark<69){
+	           System.out.println("A grade");
+	        }  
+	       else{
+	           System.out.println("Fail");
+	       }
+	    
+	
+	}
+}
+
+/* OUTPUT
+45
+Fail
+*/
