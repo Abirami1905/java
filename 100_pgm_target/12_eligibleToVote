@@ -1,0 +1,24 @@
+/******************************************************************************
+Eligibility to Vote:
+
+Write a program that checks if a person is eligible to vote based 
+on their age (18 and above).
+*******************************************************************************/
+
+public class Main
+{
+	public static void main(String[] args) {
+	    int age=12;
+		System.out.println("check whether a person is eligible to vote or not");
+		if(age>=18){
+		    System.out.println("eligible to vote");
+		}
+		else{
+		    System.out.println(" not eligible to vote");
+		}
+	
+	}
+}
+/* check whether a person is eligible to vote or not
+not eligible to vote
+*/
