@@ -1,0 +1,34 @@
+/******************************************************************************
+Simple Calculator:
+
+Write a program that takes two numbers and an operator (+, -, *, /)
+as input and performs the corresponding arithmetic operation.
+*******************************************************************************/
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    int n1=-18,n2=6;
+	    String operator="+";
+		System.out.println("Arithmetic Operation");
+		if(operator=="+"){
+		    System.out.println("Addition:"+(n1+n2));
+		}
+		else if(operator=="-"){
+		    System.out.println("Subtraction:"+(n1-n2));
+		}
+		else if(operator=="*"){
+		    System.out.println("Multiplication:"+(n1*n2));
+		}
+		else if(operator=="/"){
+		    System.out.println("Division:"+(n1/n2));
+		}
+		else{
+		      System.out.println("Invalid operator or operand");
+		}
+	
+	}
+}
+/* Arithmetic Operation
+Addition:-12
+*/
