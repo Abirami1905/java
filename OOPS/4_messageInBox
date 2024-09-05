@@ -1,0 +1,28 @@
+/******************************************************************************
+
+                           Write a method to print welcome message in a box
+*******************************************************************************/
+
+public class Main{
+
+static void message(){
+    System.out.println("welcome");
+}
+
+static void printline(){
+    System.out.println("----------------------");
+}
+
+
+	public static void main(String[] args) {
+		printline();
+		message();
+		printline();
+	}
+}
+/*
+OUTPUT:
+--------------------------
+welcome
+--------------------------
+*/
