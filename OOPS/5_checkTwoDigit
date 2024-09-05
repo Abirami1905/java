@@ -1,0 +1,30 @@
+/******************************************************************************
+
+    Check if the given number is a two digit number.                      
+*******************************************************************************/
+class two_digit{
+   
+        static boolean checkTwoDigit(int n){
+        if(n>9 && n<100){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+    
+}
+public class Main
+{
+	public static void main(String[] args) {
+		System.out.println("check the given number is two digit or not");
+		int n=56;
+		System.out.println(n+" is a two digit number : "+two_digit.checkTwoDigit(n));
+	}
+}
+
+/* OUTPUT
+
+check the given number is two digit or not
+56 is a two digit number : true
+*/
