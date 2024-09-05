@@ -1,0 +1,25 @@
+/******************************************************************************
+
+                          Check Divisibility:
+
+Write a Java program that checks whether a given number 
+is divisible by both 5 and 11.
+
+*******************************************************************************/
+
+public class Main
+{
+	public static void main(String[] args) {
+	    int n=55;
+	    if(n%5==0 && n%11==0){
+	       System.out.println(n+" is divisible by both 5 and 11"); 
+	    }
+	    else{
+	          System.out.println(n+" is not divisible by both 5 and 11");
+	    }
+		
+	}
+}
+
+/*OUTPUT:
+55 is divisible by both 5 and 11*/
