@@ -1,0 +1,27 @@
+/******************************************************************************
+Positive, Negative, or Zero:
+
+Write a Java program that checks whether a given number is positive, negative,
+or zero (similar to the one I provided earlier).
+*******************************************************************************/
+
+public class Main
+{
+	public static void main(String[] args) {
+	    int number=-18;
+		System.out.println("check whether the given number is positive,negative or zero");
+		if(number>=1){
+		    System.out.println("positive");
+		}
+		else if(number<0){
+		    System.out.println("negative");
+		}
+		else{
+		    System.out.println("zero");
+		}
+	
+	}
+}
+/* check whether the given number is positive , negative or zero
+negative
+*/
