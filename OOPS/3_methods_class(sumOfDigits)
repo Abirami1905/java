@@ -1,0 +1,20 @@
+public class Main{
+    int n;
+     static int sumOfDigit(int n)
+    {
+      int sum=0;  
+      while (n>0){
+          int temp=n%10;//45%10=5 ,temp=5;4%10=4 ,temp=4
+          sum=sum+temp; // sum=0+5 , sum=5 ; sum=4+5 , sum=9
+          n=n/10;//n=45/10 , n=4 ; n=4/10 , n=0.4 
+          }
+          return sum;
+    }
+
+
+
+	public static void main(String[] args) {
+	  
+	    System.out.println(sumOfDigit(45));
+	}
+}
