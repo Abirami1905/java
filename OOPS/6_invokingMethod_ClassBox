@@ -1,0 +1,50 @@
+/******************************************************************************
+   Create a class called box and give the input by creating 2 objects for 
+   length,breadth and height.create a method to find volume and invoke the 
+   volume method to find the volume of the 2 objects.Also write a surfaceArea 
+   method to find the surface area for the 2 objects.
+                            
+*******************************************************************************/
+class Box{
+    int area,length,breadth,height;// instance variables
+    
+    // method to find volume 
+     int volume()
+    {
+        return length*breadth*height;
+    }
+    
+    // method to find surfaceArea 
+    Double surfaceArea()
+    {
+      return 4 * Math.pow(area,2);
+    }
+    
+    
+}
+public class Main
+{
+	public static void main(String[] args) {
+	    Box blackBox=new Box();//first object creation
+	    blackBox.area=59;
+	    blackBox.length=56;
+	    blackBox.breadth=75;
+	    blackBox.height=63;
+	    System.out.println("volume of blackBox is "+blackBox.volume());//invoking a method with object 1
+	    System.out.println("surface Area of blackBox is "+blackBox.surfaceArea());
+	    
+	    Box woodBox=new Box();//second object creation
+	    woodBox.area=45;
+	    woodBox.length=65;
+	    woodBox.breadth=57;
+	    woodBox.height=36;
+	    System.out.println("volume of woodBox is "+woodBox.volume());//invoking a method with object 2
+	    System.out.println("surface Area of woodBox is "+woodBox.surfaceArea());
+	
+	}
+}
+/* OUTPUT
+volume of blackBox is 264600
+surface Area of blackBox is 13924.0
+volume of woodBox is 133380
+surface Area of woodBox is 8100.0 */
