@@ -1,0 +1,49 @@
+/******************************************************************************
+    Define a class called student . Add relevant data like name,roll.no,marks.
+    Define MarksTotal method . Create different student objects , initialize with 
+    constructors and invoke the method.
+*******************************************************************************/
+class Student{
+    // INSTANCE VARIABLES
+    String name;
+    int roll_no;
+    int E_marks;
+    int SS_marks;
+    int S_marks;
+    int M_marks;
+    int T_marks;
+    ;
+    
+    // MarksTotal METHOD
+    int MarksTotal(){
+       return E_marks+SS_marks+S_marks+M_marks+T_marks;
+    }
+    
+    //CONSTRUCTOR
+    Student(String Sname,int r_n,int E,int SS,int S, int M,int T)
+    {
+        this.name=Sname;
+        this.roll_no=r_n;
+        this.E_marks=E;
+        this.SS_marks=SS;
+        this.S_marks=S;
+        this.M_marks=M;
+        this.T_marks=T;
+    }
+}
+
+public class Main{
+    public static void main(String[]args){
+        Student S1 = new Student("Arjun",001,95,85,92,88,97);
+        System.out.println("Roll_NO : "+S1.roll_no);
+        System.out.println("Student Name : "+S1.name);
+        // invoking MarksTotal method by S1 object
+        System.out.println("The total marks obtained by "+S1.name+ " is : "+S1.MarksTotal());
+    }
+}
+
+/* OUTPUT
+Roll_NO : 1
+Student Name : Arjun
+The total marks obtained by Arjun is : 457
+*/
