@@ -1,0 +1,26 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    int n;
+	    int factorial=0;
+	    Scanner input=new Scanner(System.in);
+	    n=input.nextInt();
+	    
+	    for(int i=n-1;i>=1;i--)
+	    {
+	        int a=i;
+	        int b=n;
+	        int fact=b;
+	        factorial=fact*a;
+	    	System.out.println(factorial+" is the factorial of a given number "+n);
+	    	break;
+	   }
+	}
+
+}
+
+/* OUTPUT
+7
+42 is the factorial of a given number 7
+*/
