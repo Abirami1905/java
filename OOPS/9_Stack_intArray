@@ -1,0 +1,56 @@
+
+/*   STACK IMPLEMENTATION IN AN INTEGER ARRAY   */
+
+class Stack{
+    int s[]=new int[10];
+    int tos;
+    
+    Stack() // constructor
+    {
+       tos=-1 ;
+    }
+    
+    void push(int n)
+    {
+        if(tos==9)
+            System.out.println("Stack is overflow");
+        else
+           s[++tos]=n;
+    }
+    
+    int pop()
+    {
+        if(tos>1)
+            return s[tos--];
+        else
+            return -1;
+    }
+}
+
+public class Main
+{
+	public static void main(String[] args) {
+	
+		Stack s1=new Stack();
+		s1.push(10);
+		s1.push(7);
+		s1.push(6);
+		
+		System.out.println(s1.pop()); 
+		 
+		Stack s2=new Stack();
+		
+		s2.push(1);
+		s2.push(2);
+		s2.push(3);
+		
+		System.out.println(s2.pop()); 
+		 
+				
+	}
+}
+
+/* OUTPUT
+
+6
+3  */
