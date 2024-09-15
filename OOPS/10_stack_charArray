@@ -1,0 +1,53 @@
+
+/*   STACK IMPLEMENTATION IN AN CHAR ARRAY   */
+
+class Stack{
+    char s[]=new char[10];
+    int tos;
+    
+    Stack() // constructor
+    {
+       tos=-1 ;
+    }
+    
+    void push(char n)
+    {
+        if(tos==9)
+            System.out.println("Stack is overflow");
+        else
+           s[++tos]=n;
+    }
+    
+    char pop()
+    {
+        if(tos>1)
+            return s[tos--];
+        else
+            return 'z';
+    }
+}
+
+public class Main
+{
+	public static void main(String[] args) {
+	
+		Stack s1=new Stack();
+		s1.push('a');
+		s1.push('e');
+		s1.push('i');
+		
+		System.out.println(s1.pop()); 
+		 
+		Stack s2=new Stack();
+		
+		s2.push('c');
+		s2.push('b');
+		s2.push('a');
+		
+		System.out.println(s2.pop()); 
+		}
+}
+
+/* OUTPUT
+i
+a  */
