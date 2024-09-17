@@ -1,0 +1,31 @@
+/******************************************************************************
+
+                           pattern printing exercise 1
+                                            
+                                    1
+                                  2   2
+                                3   3   3
+                              4   4    4   4
+
+*******************************************************************************/
+
+public class Main
+{
+	public static void main(String[] args) {
+	    int n=4;  //input
+	    
+	    for(int i=1;i<=n;i++)  // 'i' loop for no.for rows
+	    {
+	        for(int j=n;j>i;j--)  // 'j' loop for printing spaces before numbers
+	        {
+	            System.out.print(" ");
+	        }
+	        
+	        for(int k=1;k<=i;k++)  // 'k' loop for printing numbers
+	        {
+	            System.out.print(i+" ");
+	        }
+	        System.out.println();
+	   }
+	}
+}
