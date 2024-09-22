@@ -1,0 +1,36 @@
+LOGIC 1: REVERSED STRING (With storing the reversed string in a variable)
+
+
+public class Main
+{
+	public static void main(String[] args) {
+	    String a="ABIRAMI";
+	    String a2="";
+	    for(int i=a.length()-1;i>=0;i--)//i<7-1;i>=0;print();6 decremented to 5
+	    {
+	        a2=a2+a.charAt(i);//""+I="I"
+	    }
+		System.out.println("The reversed string is :"+a2);
+	}
+}
+
+output:
+The reversed string is : IMARIBA
+
+LOGIC 2: REVERSED STRING (Without storing the reversed string in a variable)
+
+public class Main
+{
+	public static void main(String[] args) {
+	    String a="ABIRAMI";
+	    
+	    for(int i=a.length()-1;i>=0;i--)//i<7-1;i>=0;print();6 decremented to 5
+	    {
+	       
+		System.out.print(a.charAt(i));
+	    }
+	}
+}
+
+output:
+      IMARIBA
