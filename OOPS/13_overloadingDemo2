@@ -1,0 +1,34 @@
+/***************************************************************************
+  program which use the count of arguments and call the method 
+   according to the parameters passed
+                           
+*******************************************************************************/
+
+public class Overloadingdemo2
+{
+    static void test(int a){
+        System.out.println("test method with 1 argument");
+    }
+    
+     static void test(int a,int b){
+        System.out.println("test method with 2 argument");
+    }
+    
+     static void test(){
+        System.out.println("test method without argument");
+    }
+
+
+public static void main (String[] args) {
+    
+    Overloadingdemo2.test();
+    test(4);
+    test(4,9);
+   }
+}
+
+/*  OUTPUT:
+test method without argument
+test method with 1 argument
+test method with 2 argument
+*/
