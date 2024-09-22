@@ -1,0 +1,36 @@
+/* Write overloaded methods to find avg of 2 or 3 numbers*/
+
+public class Main{
+    
+    static void avg(int a,int b){
+        int c=a+b;
+        int result=c/2;
+        System.out.println("the Average of two numbers is "+ result);
+    }
+    
+    static int avg(int a,int b,int c){
+        int d=a+b+c;
+        int result=d/2;
+        return result;
+    }
+    
+    static void avg(double a,double b){
+        double c=a+b;
+        double result=c/2;
+        System.out.println("the Average of two numbers is "+ result);
+    }
+    
+    public static void main (String[] args) {
+        avg(5,6);
+        System.out.println("the Average of three numbers is "+ avg(8,9,6));
+        avg(8.8,9.6);
+    }
+}
+
+/*
+OUTPUT:
+     the Average of two numbers is 5
+     the Average of three numbers is 11
+     the Average of two numbers is 9.2
+
+*/
