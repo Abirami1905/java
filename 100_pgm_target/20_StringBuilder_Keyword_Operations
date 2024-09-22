@@ -1,0 +1,63 @@
+/*    STRING BUILDER KEYWORD OPERATIONS:
+1)reverse(String),
+2)append(String),
+3)insert(pos,String),
+4)delete(Startpos,endPos),
+5)replace(Startpos,endPos,String StringName),
+6)setLength(lengthINnumber)   */
+
+
+public class Main{
+    public static void main (String[] args) {
+        
+        String use=" the";
+        
+        // reverse using StringBuilder
+        System.out.println("reverse using StringBuilder");
+        String str="Automation";
+        StringBuilder a=new StringBuilder(str).reverse();
+        System.out.println(a);
+        System.out.println();
+        
+        //append using StringBuilder
+        System.out.println("append using StringBuilder");
+        a.append(" = Automation");
+        System.out.println(a);
+        System.out.println();
+        
+        // insert using StringBuilder
+        System.out.println("insert using StringBuilder");
+        a.insert(0,"Reverse ");
+        System.out.println(a);
+        System.out.println();
+        
+        // insert using StringBuilder
+        System.out.println("insert using StringBuilder");
+        a.insert(7," of ");
+        System.out.println(a);
+        System.out.println();
+        
+        // delete using StringBuilder
+        System.out.println("insert using StringBuilder");
+        a.delete(7,10);
+        System.out.println(a);
+        
+        // insert using StringBuilder
+        System.out.println("insert using StringBuilder");
+        a.insert(7," of ");
+        System.out.println(a);
+        System.out.println();
+        
+        // replace using StringBuilder
+        System.out.println("replace using StringBuilder");
+        a.replace(7,10, use);
+        System.out.println(a);
+        System.out.println();
+        
+        // setLength using StringBuilder
+        System.out.println("setLength using StringBuilder");
+        a.setLength(7);
+        System.out.println(a);
+        
+    }
+}
