@@ -1,0 +1,64 @@
+/******************************************************************************
+Alice has an array 'B'  and she wants to figure out how many times the second
+highest element appears in it. your task is to help her by returning an integer that
+represents the number of occurences of this second highest element in the array.
+
+note: 
+   1) if the array consists of identical elements , rewturn 0
+   
+   2) the array is sorted and contains consecutive elements
+   
+input:
+    8
+    12344555
+output:
+    2
+*******************************************************************************/
+import java.util.*;
+public class Main{
+     public static void main(String[] args) {
+         
+      Scanner input=new Scanner(System.in);
+      System.out.println("enter the size of an array:");
+      int size =input.nextInt();
+      System.out.println("enter the elements:");
+      int [] numArray =new int[size];
+      
+      
+       //loop for storing values in an array
+      for(int a=0; a<size;a++){
+          numArray[a]=input.nextInt();
+      }
+      
+      input.close();
+      
+      int Secmax=numArray[0];
+      int max=numArray[0];
+      int count=0;
+      
+      
+    
+      for (int i=0;i< numArray.length ;i++ ) {
+          if(numArray[i]>Secmax){
+              Secmax=numArray[i-1];
+              max=numArray[i];
+          }
+          
+          
+      }
+      
+      for(int j=0;j<numArray.length;j++){
+          if(numArray[j]==Secmax && numArray[j]<max){
+              count++;
+          }
+          
+          else if(max==Secmax){
+              System.out.println("0");
+              return ;
+          }
+        }
+      System.out.println("count of second maximum element "+Secmax+" is "+count);
+      
+      
+	}
+}
