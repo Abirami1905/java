@@ -40,8 +40,8 @@ public class Main{
     
       for (int i=0;i< numArray.length ;i++ ) {
           if(numArray[i]>Secmax){
-              Secmax=numArray[i-1];
               max=numArray[i];
+              Secmax=max-1;
           }
           
           
