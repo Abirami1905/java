@@ -1,0 +1,45 @@
+/******************************************************************************
+
+                            program to find second maximum 
+                            
+                    and count of second maximum number in the array
+
+*******************************************************************************/
+import java.util.*;
+public class Main{
+     public static void main(String[] args) {
+         
+      Scanner input=new Scanner(System.in);
+      int size =input.nextInt();
+      int [] numArray =new int[size];
+      
+      
+       //loop for storing values in an array
+      for(int a=0; a<size;a++){
+          numArray[a]=input.nextInt();
+      }
+      
+      input.close();
+      
+      int Secmax=numArray[0];
+      int count=0;
+      
+      
+    
+      for (int i=0;i< numArray.length ;i++ ) {
+          if(numArray[i]>Secmax){
+              Secmax=numArray[i-1];
+          }
+         
+      }
+      
+      for(int j=0;j<numArray.length;j++){
+          if(numArray[j]==Secmax){
+              count++;
+          }
+        }
+      System.out.println(count);
+      
+      
+	}
+}
