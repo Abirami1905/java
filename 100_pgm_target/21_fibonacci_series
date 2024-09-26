@@ -1,0 +1,19 @@
+public class Main
+{
+    public static void main(String[] args) {
+        int n = 21; // Limit of Fibonacci series
+        int a = 0, b = 1;
+        
+        System.out.print("Fibonacci series up to " + n + ": " + a + ", " + b);
+        
+        while (true) {
+            int c = a + b;
+            if (c > n) {
+                break;
+            }
+            System.out.print(", " + c);
+            a = b;
+            b = c;
+        }
+    }
+}
