@@ -1,0 +1,28 @@
+public class GFG {
+    
+    public static String compare(int n, int m) {
+        if (n < m) {
+            return "lesser";
+        } else if (n == m) {
+            return "equal";
+        } else {
+            return "greater";
+        }
+    }
+
+    public static void main(String[] args) {
+        int n = 2;
+        int m = 3;
+        
+        System.out.println(compare(n, m));  // Expected output: "lesser"
+    }
+}
+/* OUTPUT:
+For Input: 
+4
+8
+Your Output: 
+lesser
+Expected Output: 
+lesser
+*/
