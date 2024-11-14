@@ -1,0 +1,29 @@
+//Geeks For Geeks
+
+// User function Template for Java
+
+class Solution {
+    static int dataTypeSize(String str) {
+        switch(str){
+            case "Character":
+                return Character.BYTES;
+            case " Integer":
+                return  Integer.BYTES;
+            case "Long":
+                return Long.BYTES;
+            case "Float":
+                return Float.BYTES;
+            case "Double":
+                return Double.BYTES;
+            default:
+                 return -1;
+            
+        }
+        /* OUTPUT:
+For Input: 
+Character
+Your Output: 
+1
+Expected Output: 
+1
+*/
