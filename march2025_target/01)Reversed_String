@@ -1,0 +1,75 @@
+/*
+input : Hello
+output : olleH
+*/
+
+// LOGIC 1
+
+import java.util.*;
+public class Main{
+    public static void main (String[] args) {
+        Scanner a = new Scanner(System.in);  // user input
+        String s=a.nextLine();
+        
+        for(int i=s.length()-1;i>=0;i--){  // for reversing
+            System.out.print(s.charAt(i));
+        }
+        
+        
+    }
+}
+
+// LOGIC 2
+
+import java.util.*;
+public class Main{
+    public static void main (String[] args) {
+        Scanner a = new Scanner(System.in);  // user input
+        String s=a.nextLine();
+        String ans = "";  // declaring empty String
+        
+        for(int i=s.length()-1;i>=0;i--){  // for reversing
+            ans = ans + s.charAt(i);  // ans = "" + last position's value
+        }
+       System.out.print(ans); 
+        
+    }
+}
+
+// LOGIC 3
+
+import java.util.*;
+public class Main{
+    public static void main (String[] args) {
+        String s= "Hello World";
+        StringBuilder ans = new StringBuilder();  // declaring inbuilt function to reduce memory UnsupportedOperationException
+        
+        for(int i=s.length()-1;i>=0;i--){  // for reversing
+            ans.append(s.charAt(i));  // ans = "" + last position's value
+        }
+       System.out.print(ans); 
+        
+    }
+}
+
+// LOGIC 4
+// REVERSE AN ARRAY (Swapping using two initializations i and j)
+
+import java.util.*;
+public class Main{
+    public static void main (String[] args) {
+        String s= "Hello World"; 
+        char a[] = s.toCharArray(); // converting string into Character array
+        
+        for(int i=0,j=s.length()-1;i<j;i++,j--){  // for reversing we use swapping method
+           
+           char t = a[i];
+           a[i] = a[j];
+           a[j] = t;
+        }
+       System.out.print(a); 
+        
+    }
+}
+
+
