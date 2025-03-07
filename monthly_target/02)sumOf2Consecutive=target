@@ -1,0 +1,24 @@
+/******************************************************************************
+
+                           sum of consecutive elements = target
+
+*******************************************************************************/
+
+public class Main
+{
+	public static void main(String[] args) {
+		int a[]={1,2,3,4,5,2};
+		int target = 5;
+		
+		for(int i=0;i<=a.length-2;i++) // a.length-2 --> since we have to check until 7
+		{
+		    if(a[i]+a[i+1] == target){
+		        System.out.println(a[i]+","+a[i+1]);
+		    }
+		}
+	}
+}
+
+
+input :{1,2,3,4,5,2} , target = 5
+output : 2,3
