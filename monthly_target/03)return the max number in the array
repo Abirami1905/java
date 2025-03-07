@@ -1,0 +1,29 @@
+/******************************************************************************
+
+                          FIND THE MAXIMUM NUMBER FROM AN ARRAY
+
+*******************************************************************************/
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+	    System.out.print("Enter the elements to be inserted:");
+	    int n = sc.nextInt();
+	    int[]a=new int[n];
+	    int max=a[0];
+	    
+	    // input loop
+	    for(int i=0;i<a.length;i++){
+	        a[i] = sc.nextInt();
+	    }
+	    
+	    // checking max number in the loop
+	    for(int i=1;i<a.length;i++){
+	        if(max<a[i]){
+	            max=a[i];
+	        }
+	   }
+	  System.out.println(max);  
+	}
+}
