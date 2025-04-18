@@ -1,0 +1,27 @@
+/******************************************************************************
+             Find the Maximum value in a range of values in an Array
+             
+             input : {9,2,7,1} |range : 1 to 3(index)| output : 7
+*******************************************************************************/
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	   int [] arr ={9,2,7,1};
+	   System.out.println(maxRange(arr,0,1));
+	 }
+	 
+	 public static int maxRange(int[]array,int start, int end){
+	     int max=array[start];
+	     
+	     for(int i=start;i<end;i++){
+	         if(array[i] > max){
+	             max=array[i];
+	         }
+	     }
+	     
+	     return max;
+	}
+}
+
+// for(int i=array[start];i<array[end];i++) --> it will output the index of the max value
