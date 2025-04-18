@@ -1,0 +1,19 @@
+/******************************************************************************
+ Print numbers from 1 to 100 in java without using any numeric literals (0-9)
+
+*******************************************************************************/
+public class Main{
+    public static void main (String[] args) {
+        
+        char one ='A'/'A';   // since 'A'/'A' gives output as 1
+
+        String ten ="..........";//10 dots
+
+        for (int i=one;i<=ten.length()*ten.length();i++ ){
+    
+                  System.out.print(i+" ");
+    
+        } 
+        
+    }
+}
