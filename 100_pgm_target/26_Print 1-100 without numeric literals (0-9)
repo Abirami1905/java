@@ -17,3 +17,26 @@ public class Main{
         
     }
 }
+
+// Another approach to solve this problem
+
+// Boolean logic
+
+
+public class Main{
+    public static void main (String[] args) {
+        
+        boolean [] arr=new boolean['d']; //'d' --> ASCII value for this is 100
+        
+        int i ='A'/'A';   // since 'A'/'A' gives output as 1 and starts from 1
+        
+        for (boolean bool_element : arr){
+                  
+                  System.out.print(i+" ");
+                  i++;
+        } 
+        
+        
+    }
+}
+
