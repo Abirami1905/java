@@ -1,0 +1,29 @@
+/******************************************************************************
+
+             Print 'THALAIVA' without using any vowels
+
+*******************************************************************************/
+
+
+import java.util.*;
+
+public class Main{
+    public static void main (String[] args) {
+              
+    char t='T',h='H',l='L',v='V';
+    char a=(char)('B'-1);
+    char i=(char)('J'-1);
+    
+    System.out.print(t);
+    System.out.print(h);
+    System.out.print(a);
+    System.out.print(l);
+    System.out.print(a);
+    System.out.print(i);
+    System.out.print(v);
+    System.out.print(a);
+    
+    }
+    
+}
+
