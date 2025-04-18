@@ -1,0 +1,25 @@
+/******************************************************************************
+                  User input for Array List 
+                  
+                  input:  2
+                          1  2
+                  output:[1, 2]
+                          
+*******************************************************************************/
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+	    int n=sc.nextInt();
+	    ArrayList <Integer> List = new ArrayList <>(n);
+	   
+	   // get input from user
+	   for(int i=0;i<n;i++){
+	       List.add(sc.nextInt());  // add() helps to append values in a list
+	   }
+	   
+	   // print the updated List
+	   System.out.println(List);
+	}
+}
