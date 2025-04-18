@@ -1,0 +1,26 @@
+/******************************************************************************
+               Dynamic Array (COLUMN LENGTH NOT FIXED)
+               
+               
+Definition: In Java, a dynamic array is an array-like data structure that can grow
+or shrink in size during runtime. Unlike regular arrays in Java (which are of
+fixed size once declared), dynamic arrays can adjust their size based on the number
+of elements they hold.
+eg: Array List
+*******************************************************************************/
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {   // i --> row , j --> column
+	    Scanner sc = new Scanner(System.in);
+	    int[][]array={
+	        {1,2,3,0},
+	        {4,5},
+	        {7,8,9}
+	    };
+	    // OUTPUT (using enhanced for-loop(for-each))
+		for(int[]a : array ){
+		    System.out.print(Arrays.toString(a));
+		 }
+	}
+}
