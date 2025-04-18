@@ -1,0 +1,23 @@
+/******************************************************************************
+Getting user input and output in an array (Optimized approach)
+*******************************************************************************/
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter the number of elements in an array : ");
+		int n=sc.nextInt();
+		// creating an integer array
+		int [] arr = new int[n];
+		
+		//Getting user input using for-each
+		for(int element : arr){
+		    arr[i]=sc.nextInt();
+		}
+		
+		//printing output using inbuilt array output method
+		System.out.println(Arrays.toString(arr));
+		
+	}
+}
