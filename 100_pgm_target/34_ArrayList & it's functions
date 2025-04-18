@@ -1,0 +1,40 @@
+/******************************************************************************
+                  Array List and it's Functions
+                  
+                  output: [23, 1, 2, 56, 76, 65, 07]
+                          true
+                          [99, 1, 56, 76, 65, 7]
+*******************************************************************************/
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    
+	    ArrayList <Integer> List = new ArrayList <>(10);
+	    //Default size is 10 i.e.(10)
+	   // Integer --> Wrapper class , int --> primitive
+	   
+	   List.add(23);  // add() helps to append values in a list
+	   List.add(1);
+	   List.add(2);
+	   List.add(56);
+	   List.add(76);
+	   List.add(65);
+	   List.add(07);
+	   // printing list elements
+	  // i.e.[23, 1, 2, 56, 76, 65, 7]
+	   System.out.println(List);  
+	   // checks if 1 present in the list --> contains()
+	   System.out.println(List.contains(1));  
+	   
+	   // replace the value in the index position --> set()
+	   List.set(0,99);
+	   
+	   // remove in the element by using index position --> remove()
+	   List.remove(2);  // here 2 is the index value
+	   
+	   System.out.println(List);  // print the updated List
+	                              // i.e.[99, 1, 56, 76, 65, 7]
+	   
+	}
+}
