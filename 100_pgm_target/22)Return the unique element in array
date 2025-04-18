@@ -1,0 +1,19 @@
+/******************************************************************************
+
+                           Return the unique elements in an array
+
+*******************************************************************************/
+
+public class Main
+{
+	public static void main(String[] args) {
+	    
+	    int [] arr = {4,5,6,6,5,4,3};
+	    int uniqueElement =0;
+	    //for-each
+	    for(int ele:arr){
+	        uniqueElement ^= ele;
+	    }  
+		System.out.println("The unique element in an array is : "+uniqueElement);
+	}
+}
