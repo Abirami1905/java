@@ -1,0 +1,29 @@
+🔄 What is a Circular Linked List?
+A Circular Linked List is a variation of a linked list where:
+The last node points back to the first node, forming a loop.
+It can be singly (next only) or doubly (next and prev) circular.
+So there’s no "null" at the end like in a regular singly linked list.
+
+🧠 Key Points:
+There is no NULL in the next of the last node.
+You can traverse forever if you're not careful — always stop when current == head.
+Commonly used in games, buffer management, round-robin scheduling, etc.
+
+🧱 Structure of a Node (Singly Circular):
+class Node {
+    int data;
+    Node next;
+
+    Node(int data) {
+        this.data = data;
+    }
+}
+
+📌 Example:
+Let’s say we insert 1, 2, 3:
+1 -> 2 -> 3 -> (back to head, so next is 1 again)
+  
+🧪 Advantages of Circular Linked List:
+Easier to implement circular queues.
+Perfect for applications where round-robin or cycling through items is needed.
+
