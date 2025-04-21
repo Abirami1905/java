@@ -1,0 +1,31 @@
+🔁 What is a Doubly Linked List?
+A Doubly Linked List is a type of linked list where each node contains:
+Data (the actual value)
+A pointer to the next node
+A pointer to the previous node
+So you can go forward and backward in the list!
+
+🧱 Structure of a Node
+class Node {
+    int val;
+    Node next; // points to the next node
+    Node prev; // points to the previous node
+}
+
+
+🧠 Why Use a DLL?
+Compared to a singly linked list, a DLL:
+Allows traversal in both directions
+Makes deleting a node faster (no need to track the previous node manually)
+
+💡 How It Works (Example):
+Let’s say we insert 10, 20, 30.
+
+null <- [30] <-> [20] <-> [10] -> null
+Each node knows both its next and previous node. 
+
+🎯 Key Points to Remember
+Use DLL when you need backward traversal.
+Slightly more memory than singly linked list (because of extra prev pointer).
+More flexible for inserting and deleting from both ends.
+
