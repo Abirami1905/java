@@ -1,0 +1,126 @@
+
+public class Main
+{
+	public static void main(String[] args) {
+	    
+	    LL list = new LL();
+	    
+	    list.insertAtFirst(1);
+	    list.insertAtFirst(8);
+	    list.insertAtFirst(3);
+	    list.insertAtFirst(5);
+	    list.insertAtFirst(9);
+	    list.insertAtFirst(7);
+	    list.insertAtFirst(10);
+	    
+	    list.insertAtLast(77);
+	    list.insertAtLast(100);
+	    
+	    list.insertAtPos(7777,4);
+	    list.insertAtPos(10000,3);
+	    list.insertAtPos(6574,8);
+	    
+	    
+	    
+	    list.display();
+		
+	}
+	
+	
+	public static class LL {
+	    private Node head;
+	    private Node tail;
+	    private int size;
+	    
+	    public LL(){
+	        this.size=0;
+	    }
+	    
+	    
+	    // INSERTION AT FIRST
+	    public void insertAtFirst(int val){
+	        // creating a new node
+	        Node node = new Node(val);
+	        node.next = head;   // next is pointing to head
+	        head = node; // head is always at first
+	        
+	        if(tail == null){
+	            tail=head;
+	        }
+	        
+	        size +=1;
+	    }
+	    
+	    //INSERTION AT LAST
+	    public void insertAtLast(int val){
+	        
+	        // if tail is empty
+	        
+	        if(tail == null){
+	            insertAtFirst(val);
+	            return;
+	        }
+	        // creating a new Node
+	        Node node2 = new Node(val);
+	        
+	        tail.next = node2;  // connect the node with the tail
+	        tail=node2;
+	        size ++;
+	    }
+	    
+	    // INSERTION AT A PARTICULAR POSITION
+	    
+	    public void insertAtPos(int val,int idx){
+	        
+	        if(idx == 0){
+	            insertAtFirst(val);
+	            return;
+	        }
+	        
+	        if(idx == size){
+	            insertAtLast(val);
+	            return;
+	        }
+	        
+	        Node temp = head;
+	        for (int i=1;i<idx ;i++ ){
+	            temp=temp.next;
+	            
+	        } 
+	        
+	        Node node3 = new Node(val,temp.next);
+	        temp.next = node3;
+	         
+	         size ++ ;
+	   }
+	    
+	    // DISPLAY
+	    
+	    public void display(){
+	        Node temp=head;
+	        
+	        while(temp != null){
+	            System.out.print(temp.value +" -> ");
+	            temp=temp.next;  // moving temp
+	        }
+	        System.out.print("null");
+	    }
+	    
+	    private class Node{
+	        private int value;
+	        private Node next;
+	        
+	        
+	        public Node(int value){
+	            this.value=value;
+	        }
+	        
+	        public Node(int value,Node next){
+	            this.value = value;
+	            this.next = next;
+	        }
+	    }
+	    
+	    
+	}
+}
