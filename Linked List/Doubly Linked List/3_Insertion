@@ -1,0 +1,131 @@
+public class Main {
+    public static void main(String[] args) {
+        DLL list = new DLL();
+        list.insertFirst(12);
+        list.insertFirst(24);
+        list.insertFirst(32);
+
+        list.insertLast(99);
+        list.display();
+
+        System.out.println("\nAfter inserting 100000 after node with value 3 (invalid) and 24 (valid):");
+        list.insert(3, 100000); // should print "Does not exist"
+        list.insert(24, 100000); // inserts after value 24
+        list.display();
+    }
+}
+
+class DLL {
+
+    private Node head;
+
+    // INSERT FIRST
+    public void insertFirst(int val) {
+        Node node = new Node(val);
+        node.next = head;
+        node.prev = null;
+
+        if (head != null) {
+            head.prev = node;
+        }
+
+        head = node;
+    }
+
+    // DISPLAY
+    public void display() {
+        Node node = head;
+        Node last = null;
+
+        System.out.println("Forward:");
+        while (node != null) {
+            System.out.print(node.val + " -> ");
+            last = node;
+            node = node.next;
+        }
+        System.out.println("END");
+
+        System.out.println("Reverse:");
+        while (last != null) {
+            System.out.print(last.val + " -> ");
+            last = last.prev;
+        }
+        System.out.println("START");
+    }
+
+    // INSERT LAST
+    public void insertLast(int val) {
+        Node node = new Node(val);
+        node.next = null;
+
+        if (head == null) {
+            node.prev = null;
+            head = node;
+            return;
+        }
+
+        Node last = head;
+        while (last.next != null) {
+            last = last.next;
+        }
+
+        last.next = node;
+        node.prev = last;
+    }
+
+    // INSERT AFTER A VALUE
+    public void insert(int after, int val) {
+        Node p = find(after);
+
+        if (p == null) {
+            System.out.println("Does not exist");
+            return;
+        }
+
+        Node node = new Node(val);
+        node.next = p.next;
+        node.prev = p;
+        p.next = node;
+
+        if (node.next != null) {
+            node.next.prev = node;
+        }
+    }
+
+    // GET BY INDEX
+    public Node get(int idx) {
+        Node node = head;
+        for (int i = 0; i < idx && node != null; i++) {
+            node = node.next;
+        }
+        return node;
+    }
+
+    // FIND BY VALUE
+    public Node find(int value) {
+        Node node = head;
+        while (node != null) {
+            if (node.val == value) {
+                return node;
+            }
+            node = node.next;
+        }
+        return null;
+    }
+
+    // NODE CLASS
+    private class Node {
+        Node next, prev;
+        int val;
+
+        Node(int val) {
+            this.val = val;
+        }
+
+        Node(int val, Node next, Node prev) {
+            this.val = val;
+            this.next = next;
+            this.prev = prev;
+        }
+    }
+}
