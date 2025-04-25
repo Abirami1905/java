@@ -1,0 +1,18 @@
+/******************************************************************************
+                Reverse a word using StringBuilder
+*******************************************************************************/
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	  
+	  String word = "Abirami B";
+	  String reversed = reverse(word);
+	  System.out.println(reversed);
+	}
+	
+	public static String reverse(String input){
+	    StringBuilder sb = new StringBuilder();
+	    return sb.reverse().toString();
+	}
+}
