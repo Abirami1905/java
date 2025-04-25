@@ -1,0 +1,25 @@
+/******************************************************************************
+5. Write a program to check whether a string is a palindrome.
+Input: "madam" | Output: "Palindrome"
+Input: "hello" | Output: "Not Palindrome"
+*******************************************************************************/
+
+public class Main
+{
+	public static void main(String[] args) {
+	
+	String input="MADAM";
+	isPalindrome(input);
+	} 
+	
+	static void isPalindrome(String input){
+	    StringBuilder sb = new StringBuilder(input);
+	    String ans=sb.reverse().toString();
+	    
+	    if(ans.equals(input)){
+	        System.out.println("Palindrome");
+	    }else{
+	       System.out.println("Not Palindrome"); 
+	    }
+	}
+}
