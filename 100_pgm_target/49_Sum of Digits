@@ -1,0 +1,31 @@
+/******************************************************************************
+4. Find the sum of digits of a number
+Example: For n = 1234 → Output: 1 + 2 + 3 + 4 = 10
+*******************************************************************************/
+
+public class Main
+{
+	public static void main(String[] args) {
+	 int n=1234, sum=0;
+	 
+	 while(n>0){
+	     int temp=n%10;
+	     sum+=temp;
+	     n/=10;
+	 }
+	 System.out.println(sum);
+	 
+	}
+}
+
+//OPTIMIZED CODE
+
+public class Main {
+    public static void main(String[] args) {
+        int n = 1234, sum = 0;
+        for (; n > 0; n /= 10)
+            sum += n % 10;
+        
+        System.out.println(sum);
+    }
+}
