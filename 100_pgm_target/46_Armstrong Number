@@ -1,0 +1,55 @@
+/******************************************************************************
+6. Check if a number is an Armstrong number
+An Armstrong number is one where the sum of cubes of its digits equals the number itself.
+Example: 153 = 1³ + 5³ + 3³
+Input: 153   |   Output: Armstrong number
+*******************************************************************************/
+
+/******************************************************************************
+6. Check if a number is an Armstrong number
+An Armstrong number is one where the sum of cubes of its digits equals the number itself.
+Example: 153 = 1³ + 5³ + 3³
+Input: 153   |   Output: Armstrong number
+
+*******************************************************************************/
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	 
+	 Scanner sc = new Scanner(System.in);
+	 int result=0;
+	 int a=sc.nextInt(); //153
+	 int temp=a;//153
+	 while(temp > 0){
+	     int num=temp%10;
+	     //System.out.println(num);  // print remainder -> last digit  // 3 5 1
+	     temp=temp/10;
+	     result+=num*num*num;
+	     
+	     }
+	     //System.out.println(result);
+	     
+	     if(a == result){
+	         System.out.println("Armstrong number");
+	     }else{
+	        System.out.println("Not an Armstrong number"); 
+	     }
+	}
+
+ /** OPTIMIZED CODE  */
+ public class Main {
+    public static void main(String[] args) {
+        int num = 9474, sum = 0, temp = num;
+        int digits = ("" + num).length(); // Count digits
+
+        while (temp > 0) {
+            sum += Math.pow(temp % 10, digits);
+            temp /= 10;
+        }
+
+        System.out.println(sum == num ? "Armstrong" : "Not Armstrong");
+    }
+}
+
+}
