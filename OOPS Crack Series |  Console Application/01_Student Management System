@@ -1,0 +1,151 @@
+import java.util.*;
+
+// Main class to run the application
+public class Main {
+    public static void main(String[] args) {
+        // Create a StudentManagement object and start the menu loop
+        StudentManagement sm = new StudentManagement();
+        sm.run();
+    }
+}
+
+// Class to represent each Student
+class Student {
+    private int id;             // Student ID
+    private String name;        // Student Name
+    private String course;      // Course enrolled
+
+    // Constructor to initialize the Student object
+    public Student(int id, String name, String course) {
+        this.id = id;
+        this.name = name;
+        this.course = course;
+    }
+
+    // Getter method to retrieve student ID
+    public int getId() {
+        return id;
+    }
+
+    // Method to display student details
+    public void display() {
+        System.out.println("ID: " + id + " | NAME: " + name + " | COURSE: " + course);
+    }
+}
+
+// Class to manage the student operations
+class StudentManagement {
+    private ArrayList<Student> studentList = new ArrayList<>(); // List to store students
+    private Scanner sc = new Scanner(System.in);                // Scanner for user input
+
+    // Method to add a new student to the list
+    void addStudent() {
+        System.out.print("Enter student ID: ");
+        int id = sc.nextInt();
+        sc.nextLine(); // Consume the newline character
+
+        System.out.print("Enter student Name: ");
+        String name = sc.nextLine();
+
+        System.out.print("Enter the Course: ");
+        String course = sc.nextLine();
+
+        // Add new student to the list
+        studentList.add(new Student(id, name, course));
+        System.out.println("Student added successfully.\n");
+    }
+
+    // Method to display all students in the list
+    void viewAllStudents() {
+        if (studentList.isEmpty()) {
+            System.out.println("No students available.\n");
+            return;
+        }
+
+        System.out.println("List of Students:");
+        for (Student s : studentList) {
+            s.display(); // Call display() method of each student
+        }
+        System.out.println();
+    }
+
+    // Method to search for a student by their ID
+    void searchStudentID() {
+        System.out.print("Enter ID to search: ");
+        int id = sc.nextInt();
+        boolean found = false;
+
+        // Loop through the list to find the student
+        for (Student s : studentList) {
+            if (s.getId() == id) {
+                s.display(); // Display student details if found
+                found = true;
+                break;
+            }
+        }
+
+        // Show result based on whether student was found
+        if (!found) {
+            System.out.println("Student not found.\n");
+        } else {
+            System.out.println();
+        }
+    }
+
+    // Method to run the main menu loop
+    public void run() {
+        int choice;
+
+        // Loop until user chooses to exit (choice 4)
+        do {
+            // Display menu
+            System.out.println("1. Add student");
+            System.out.println("2. View all students");
+            System.out.println("3. Search student by ID");
+            System.out.println("4. Exit");
+            System.out.print("Enter your choice: ");
+            choice = sc.nextInt();
+
+            // Handle menu choice using switch
+            switch (choice) {
+                case 1:
+                    addStudent();
+                    break;
+                case 2:
+                    viewAllStudents();
+                    break;
+                case 3:
+                    searchStudentID();
+                    break;
+                case 4:
+                    System.out.println("Exiting...");
+                    break;
+                default:
+                    System.out.println("Invalid choice. Try again.\n");
+            }
+        } while (choice != 4); // Loop until user chooses to exit
+    }
+}
+
+/*  OUTPUT   
+1. Add student
+2. View all students
+3. Search student by ID
+4. Exit
+Enter your choice: 1
+Enter student ID: 101
+Enter student Name: Alice
+Enter the Course: Java
+Student added successfully.
+
+Enter your choice: 2
+List of Students:
+ID: 101 | NAME: Alice | COURSE: Java
+
+Enter your choice: 3
+Enter ID to search: 101
+ID: 101 | NAME: Alice | COURSE: Java
+
+Enter your choice: 4
+Exiting...
+*/
